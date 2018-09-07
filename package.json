@@ -11,6 +11,7 @@
   "devDependencies": {
     "anypixel": "^1.0.2",
     "brfs": "^1.5.0",
+    "browserify": "^16.2.2",
     "three": "^0.90.0"
   },
   "scripts": {
