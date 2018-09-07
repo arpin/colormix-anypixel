@@ -15,7 +15,7 @@
   },
   "scripts": {
     "build": "browserify -t brfs src/app.js > index.js",
-	"build-test": "browserify -d test/test.js > index.js"
+    "build-test": "browserify -d test/test.js > index.js"
   },
   "license": "MIT"
 }
