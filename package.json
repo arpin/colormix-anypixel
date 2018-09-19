@@ -12,10 +12,11 @@
     "anypixel": "^1.0.2",
     "brfs": "^1.5.0",
     "browserify": "^16.2.2",
+    "imgurify": "^2.0.1",
     "three": "^0.90.0"
   },
   "scripts": {
-    "build": "browserify -t brfs src/app.js > index.js",
+    "build": "browserify -t brfs -t imgurify src/app.js > index.js",
     "build-test": "browserify -d test/test.js > index.js"
   },
   "license": "MIT"

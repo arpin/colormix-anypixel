@@ -3,6 +3,7 @@ var fs = require('fs');
 var anypixel = require('anypixel');
 var THREE = require('three');
 var Time = require('./Time.js');
+var imageSrc = require('../img/test.png');
 
 var app = {
     shaders: [],
@@ -30,6 +31,7 @@ document.addEventListener('DOMContentLoaded', function() {
 		resolution: { value: new THREE.Vector3(anypixel.config.width, anypixel.config.height, 1.0) },
         time: { value: 0.0 },
     };
+
     app.shaders.push(
         new THREE.ShaderMaterial( {
             uniforms: uniforms,
@@ -83,6 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
         transition: { value: 0.5 },
         buffer1: { value: buffer1.texture },
         buffer2: { value: buffer2.texture },
+        buffer_additive: { value: new THREE.TextureLoader().load(imageSrc) },
     };
     var transitionShader = new THREE.ShaderMaterial( {
         uniforms: transitionUniforms,
